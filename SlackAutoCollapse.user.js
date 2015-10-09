@@ -3,7 +3,7 @@
 // @namespace   ekarcnevets
 // @description Collapses all embeds in your current Slack channel five seconds after the window loses focus
 // @include     https://smartrak.slack.com/*
-// @version     1
+// @version     2
 // @grant       none
 // ==/UserScript==
 $('document').ready(function () {
