@@ -7,7 +7,9 @@
 // @grant       none
 // ==/UserScript==
 $('document').ready(function () {
+  var collapseTask = null;
   function collapseAll() {
+    collapseTask = null;
     TS.inline_videos.collapseAllInCurrent();
     TS.inline_others.collapseAllInCurrent();
     TS.inline_imgs.collapseAllInCurrent();
@@ -20,9 +22,11 @@ $('document').ready(function () {
     if (prevType != e.type) { //  reduce double fire issues by checking identifier
       switch (e.type) {
         case 'blur':
-          setTimeout(collapseAll, 5000);
+          collapseTask = setTimeout(collapseAll, 5000);
           break;
         case 'focus':
+          if (collapseTask !== undefined)
+            clearTimeout(collapseTask);
           break;
       }
     }
