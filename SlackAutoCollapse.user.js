@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        Slack Auto Collapse
 // @namespace   ekarcnevets
-// @description Collapses all embeds in your current Slack channel five seconds after the window loses focus
+// @description Collapses all embeds in your current Slack channel at a set interval
 // @include     https://smartrak.slack.com/*
 // @version     1
 // @grant       none
@@ -25,7 +25,7 @@ $('document').ready(function () {
           collapseTask = setTimeout(collapseAll, 5000);
           break;
         case 'focus':
-          if (collapseTask !== undefined)
+          if (collapseTask !== null)
             clearTimeout(collapseTask);
           break;
       }
