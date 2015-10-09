@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name        Slack Auto Collapse
 // @namespace   ekarcnevets
-// @description Collapses all embeds in your current Slack channel five seconds after the window loses focus
-// @include     https://smartrak.slack.com/*
-// @version     2
+// @description Collapses all embeds in your current Slack channel at a set interval
+// @include     https://*.slack.com/*
+// @version     1
 // @grant       none
 // ==/UserScript==
 $('document').ready(function () {
