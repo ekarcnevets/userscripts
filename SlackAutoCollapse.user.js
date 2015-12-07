@@ -10,7 +10,7 @@ $('document').ready(function () {
   var collapseTask = null;
   function collapseAll() {
     collapseTask = null;
-    TS.inline_videos.collapseAllInCurrent();
+    //TS.inline_videos.collapseAllInCurrent();
     TS.inline_others.collapseAllInCurrent();
     TS.inline_imgs.collapseAllInCurrent();
     TS.inline_file_previews.collapseAllInCurrent();
