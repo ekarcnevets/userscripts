@@ -3,7 +3,7 @@
 // @namespace   ekarcnevets
 // @description Collapses all embeds in your current Slack channel at a set interval
 // @include     https://*.slack.com/*
-// @version     1
+// @version     1.1
 // @grant       none
 // ==/UserScript==
 $('document').ready(function () {
