@@ -19,7 +19,7 @@ $('document').ready(function () {
   }
   $(window).on('blur focus', function (e) {
     var prevType = $(this).data('prevType'); // getting identifier to check by
-    if (prevType != e.type) { //  reduce double fire issues by checking identifier
+    if (prevType != e.type) { // reduce double fire issues by checking identifier
       switch (e.type) {
         case 'blur':
           collapseTask = setTimeout(collapseAll, 5000);
